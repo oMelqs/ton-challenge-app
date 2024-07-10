@@ -12,7 +12,7 @@ export function ListItemProduct({product}: ListItemProductProps) {
   const {removeFromCart} = useCart()
 
   return (
-    <View className="flex-1 flex-row justify-between m-2 p-4 bg-white rounded-lg">
+    <View className="flex-row justify-between m-2 p-4 bg-white rounded-lg">
       <Image
         source={{uri: product.image}}
         alt={product.title}

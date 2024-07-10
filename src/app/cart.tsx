@@ -1,7 +1,7 @@
 import {ListItemProduct} from '@/components/Product/ListItemProduct'
 import {useCart} from '@/contexts/Cart/CartContext'
 import {tProduct} from '@/types/product'
-import {FlatList, Text, View} from 'react-native'
+import {FlatList, View} from 'react-native'
 
 export default function Cart() {
   const {cart} = useCart()
