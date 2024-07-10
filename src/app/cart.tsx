@@ -1,5 +1,5 @@
 import {View} from 'react-native'
 
-export default function cart() {
-  return <View></View>
+export default function Cart() {
+  return <View className="flex-1 bg-white"></View>
 }
