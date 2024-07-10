@@ -19,7 +19,7 @@ export function ListItemProduct({product}: ListItemProductProps) {
         resizeMode="contain"
         className="w-24 h-24 mb-2 self-center"
       />
-      <View className="pl-2 w-2/3">
+      <View className="w-3/5">
         <Text className="text-lg font-bold">{product.title}</Text>
         <Text className="text-md font-light">{product.category}</Text>
         <Text className="text-green-500 pt-1 text-lg">
