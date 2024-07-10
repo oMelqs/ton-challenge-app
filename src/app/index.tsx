@@ -3,7 +3,7 @@ import {View, FlatList} from 'react-native'
 import {CardProduct} from '@/components/Product/CardProduct'
 import {useGetProducts} from '@/hooks/products/useGetProducts'
 import {tProduct} from '@/types/product'
-import SkeletonCardProduct from '@/components/Product/CardProduct/skeleton'
+import SkeletonCardProduct from '@/components/Product/CardProduct/Skeleton'
 
 export default function Home() {
   const {data, isLoading} = useGetProducts()
@@ -26,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <View className="flex-1 px-2">
+    <View className="flex-1 px-2 bg-slate-50">
       <FlatList
         data={data}
         renderItem={renderItem}

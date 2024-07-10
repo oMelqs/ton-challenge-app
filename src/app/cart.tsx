@@ -1,5 +1,22 @@
-import {View} from 'react-native'
+import {ListItemProduct} from '@/components/Product/ListItemProduct'
+import {useCart} from '@/contexts/Cart/CartContext'
+import {tProduct} from '@/types/product'
+import {FlatList, Text, View} from 'react-native'
 
 export default function Cart() {
-  return <View className="flex-1 bg-white"></View>
+  const {cart} = useCart()
+  const renderItem = ({item}: {item: tProduct}) => (
+    <ListItemProduct key={item.id} product={item} />
+  )
+
+  return (
+    <View className="flex-1 px-2 bg-slate-50">
+      <FlatList
+        data={cart}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={{paddingBottom: 10}}
+      />
+    </View>
+  )
 }
