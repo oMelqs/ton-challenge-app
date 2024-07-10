@@ -19,10 +19,10 @@ export default function Cart() {
     <View className="flex-1">
       <View className="py-2 pb-4 flex-row justify-around bg-orange-300">
         <Text className="text-lg font-bold text-white">
-          {cart.length} Produtos adicionados
+          {cart.length} Added products
         </Text>
         <Text className="text-lg font-bold text-white">
-          Total {calculateTotal()}
+          Total: {calculateTotal()}
         </Text>
       </View>
       <View className="px-2">

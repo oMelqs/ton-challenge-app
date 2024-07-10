@@ -36,7 +36,7 @@ function AppStack() {
       <Stack.Screen
         name="index"
         options={{
-          headerTitle: 'Produtos',
+          headerTitle: 'Products',
           headerRight: () => (
             <Link href="/cart" suppressHighlighting>
               <Feather name="shopping-cart" size={24} color="white" />
@@ -53,7 +53,7 @@ function AppStack() {
       <Stack.Screen
         name="cart"
         options={{
-          headerTitle: 'Carrinho de Compras',
+          headerTitle: 'Shopping Cart',
           headerBackVisible: true,
           headerBackTitleVisible: false,
         }}
