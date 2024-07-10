@@ -14,7 +14,7 @@ export function CardProduct({product}: CardProductProps) {
   const isInCart = cart.some((item: tProduct) => item.id === product.id)
 
   return (
-    <View className="flex-1 m-2 p-4 bg-white rounded-lg">
+    <View testID="card-product" className="flex-1 m-2 p-4 bg-white rounded-lg">
       <Image
         source={{uri: product.image}}
         alt={product.title}
@@ -36,12 +36,14 @@ export function CardProduct({product}: CardProductProps) {
         </Text>
         {isInCart ? (
           <Pressable
+            testID="remove-button"
             className="bg-red-500 p-1 px-2 rounded-lg"
             onPress={() => removeFromCart(product.id)}>
             <Feather name="minus" size={24} color="white" />
           </Pressable>
         ) : (
           <Pressable
+            testID="add-button"
             className="bg-orange-300 p-1 px-2 rounded-lg"
             onPress={() => addToCart(product)}>
             <Feather name="plus" size={24} color="white" />

@@ -12,7 +12,9 @@ export function ListItemProduct({product}: ListItemProductProps) {
   const {removeFromCart} = useCart()
 
   return (
-    <View className="flex-row justify-between m-2 p-4 bg-white rounded-lg">
+    <View
+      testID="list-item-product"
+      className="flex-row justify-between m-2 p-4 bg-white rounded-lg">
       <Image
         source={{uri: product.image}}
         alt={product.title}
@@ -31,6 +33,7 @@ export function ListItemProduct({product}: ListItemProductProps) {
       </View>
       <View className="justify-end">
         <Pressable
+          testID="remove-button"
           className="bg-red-500 p-1 px-2 rounded-lg"
           onPress={() => removeFromCart(product.id)}>
           <Feather name="minus" size={24} color="white" />
